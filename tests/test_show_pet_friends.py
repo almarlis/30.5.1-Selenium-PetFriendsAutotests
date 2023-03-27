@@ -17,11 +17,11 @@ def test_show_pet_friends():
    pytest.driver.find_element_by_css_selector('button[type="submit"]').click()
 
    # Проверяем, что мы оказались на главной странице пользователя
-   assert pytest.driver.current_url == 'http://petfriends1.herokuapp.com/all_pets'
+   assert pytest.driver.current_url == 'https://petfriends.skillfactory.ru/all_pets'
 
-   images = pytest.driver.find_elements_by_css_selector('.card-deck .card-img-top')
-   names = pytest.driver.find_elements_by_css_selector('.card-deck .card-title')
-   descriptions = pytest.driver.find_elements_by_css_selector('.card-deck .card-text')
+   images = pytest.driver.find_elements_by_css_selector('.card-body .card-img-top')
+   names = pytest.driver.find_elements_by_css_selector('.card-body .card-title')
+   descriptions = pytest.driver.find_elements_by_css_selector('.card-body .card-text')
 
    assert names[0].text != ''
 
